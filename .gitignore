@@ -9,3 +9,8 @@ Server/dist/
 build.local.cfg
 state.json
 .vs/
+# local workflow helpers, not part of the published source
+BUILD_AND_INSTALL.bat
+tools/
+CLAUDE.md
+.claude/

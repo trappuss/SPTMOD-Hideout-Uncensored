@@ -109,8 +109,7 @@ Found by reading the 0.16.9.40743 client (`HideoutPlayerOwner`, `HideoutPlayer`,
 ## Status
 
 Everything in the table at the top has been run in game on SPT 4.1.6, except skill and mastery gain against a live
-target. `tools\verify-targets.ps1` checks every patched method against an installed `Assembly-CSharp.dll`; run it
-after an SPT update.
+target.
 
 If something misbehaves: F12 > "Debug log" (tick "Advanced settings"), reproduce, and look at
 `BepInEx\LogOutput.log` for lines from `trappuss-HideoutUncensored`. Each option can be switched off on its own.
@@ -118,17 +117,12 @@ If something misbehaves: F12 > "Debug log" (tick "Advanced settings"), reproduce
 ## Build
 
 ```
-BUILD_AND_INSTALL.bat
-```
-
-builds both parts, checks the patch targets, installs into the SPT folder and writes the release zip to `dist\`.
-By hand:
-
-```
 dotnet build HideoutUncensored.csproj -c Release -p:TarkovDir="<SPT folder>"
 dotnet build Server\HideoutUncensoredServer.csproj -c Release
-pwsh tools\verify-targets.ps1 -Game "<SPT folder>"
 ```
+
+The client plugin is staged in `dist\BepInEx\plugins\HideoutUncensored\`, the server part in
+`Server\dist\SPT_Runtime\user\mods\HideoutUncensored\`.
 
 ## Credits
 

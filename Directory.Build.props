@@ -1,5 +1,5 @@
 <Project>
-  <!-- Single version for the client plugin and the server part (also read by BUILD_AND_INSTALL.bat). Keep Plugin.PluginVersion (Plugin.cs) and ModMetadata.Version (Server/Mod.cs) the same. -->
+  <!-- Single version for the client plugin and the server part. Keep Plugin.PluginVersion (Plugin.cs) and ModMetadata.Version (Server/Mod.cs) the same. -->
   <PropertyGroup>
     <Version>1.2.0</Version>
   </PropertyGroup>
